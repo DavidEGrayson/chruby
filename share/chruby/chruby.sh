@@ -1,5 +1,7 @@
 CHRUBY_VERSION="0.3.4"
 
+[ -n "$BASH_VERSION" -o -n "$ZSH_VERSION" ] || return
+
 RUBIES=()
 [[ -d "$PREFIX/opt/rubies/" ]] && RUBIES+=("$PREFIX"/opt/rubies/*)
 [[ -d "$HOME/.rubies"       ]] && RUBIES+=("$HOME"/.rubies/*)
